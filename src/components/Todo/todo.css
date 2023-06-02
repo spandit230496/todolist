@@ -1,0 +1,124 @@
+.todoHeading{
+    display: flex;
+    flex-direction: row;
+    height: 5vh;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1rem;
+    background: #242731;
+    border-radius: 0.4rem;
+    box-sizing: border-box;
+   
+    
+
+}
+
+.todoHeading input{
+  background: #242731;
+  color:grey;
+  font-weight: 700;
+  box-sizing: border-box;
+  padding: 0.5rem;
+  border: none;
+  outline: none;
+}
+.todotopic{
+  display: flex;
+  flex-direction: row;
+ 
+
+}
+.headingvalue{
+  border-radius: 0.4rem;
+  background: #242731;
+  color:white;
+  font-size: 60%;
+  margin-left: 1rem;
+  width: 14rem;
+  height: 5vh;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 0.5rem;
+;
+}
+.topsection{
+  display: flex;
+  flex-direction:row;
+  box-sizing: border-box;
+  padding: 0.5rem;
+ 
+
+  
+}
+.todo{
+  display: flex;
+  flex-direction: column;
+  height: 15vh;
+ color: grey;
+  justify-content: space-between;
+  margin: 1rem;
+  background: #242731;
+  border-radius: 0.5rem;
+}
+.todo textarea{
+  height: 80%;
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 0.4rem;
+  background: #242731;
+  border: none;
+  resize: none;
+}
+.todo input{
+  border: none;
+  height: 100%;
+  width: 80%;
+  margin: 0 auto;
+  border-radius: 0.4rem;
+  background: #242731;
+}
+.todo input::placeholder,textarea::placeholder{
+  font-weight: 700;
+}
+.headinglogo{
+  display:flex;
+  flex-direction:row;
+  margin:0 auto;
+box-sizing: border-box;
+padding: 0.5rem}
+
+.todoenterd{
+display: flex;
+flex-direction: column;
+margin-top: 5rem;
+}
+.editTodo{
+display: flex;
+}
+.addedtodo{
+  display: flex;
+  flex-direction: column;
+  height: 15vh;
+ color: white;
+  justify-content: space-between;
+  margin: 1rem;
+  background: #242731;
+  border-radius: 0.5rem;
+  box-sizing: border-box;
+  padding: 0.5rem;
+}
+.headinglogoname{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  
+  justify-content: space-between;
+}
+.side{
+  display: flex;
+  flex-direction: column;
+  background: yellow;
+}

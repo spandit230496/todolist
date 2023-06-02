@@ -1,0 +1,79 @@
+.right{
+    display: flex;
+    flex-direction: column;
+    height: 25vh;
+    justify-content: space-between;
+    padding: 0.5rem;
+   
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    z-index: 1000;
+    
+
+}
+.containerright{
+    
+   background: black;
+  
+   
+    /* background: black; */
+    border-left: 2px solid grey;
+    width: 20vw;
+    display: flex;
+    flex-direction: column;
+    top:12%;
+    z-index: 10000;
+    height: 88vh;
+    position: absolute;
+    left:80%;
+    color:white;
+    box-sizing: border-box;
+    padding: 0.5rem;
+}
+.containerright input{
+    height: 20%;
+    outline:none;
+    border: none;
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+    padding: 0.2rem;
+    background: #242731;
+    color:white;
+    font-weight: 700;
+    box-sizing: border-box;
+    padding: 0.5rem;
+    
+    outline:none ;
+}
+.containerright textarea{
+    height: 50%;
+    outline:none;
+    border: none;
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+    padding: 0.2rem;
+    background: #242731;
+    color:white;
+    font-weight: 700;
+    box-sizing: border-box;
+    padding: 0.5rem;
+    border: none;
+    outline:none ;
+    resize: none;
+}
+
+.containerright button{
+    background: blue;
+    color:white;
+    text-align: center;
+    height: 20%;
+    border-radius: 0.5rem;
+    font-weight: 700;
+    border: none;
+}
+.edit{
+    display: flex;
+    flex-direction: row;
+    width: 2rem;
+    align-items: center;
+}

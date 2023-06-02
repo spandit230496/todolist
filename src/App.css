@@ -1,0 +1,243 @@
+
+
+*{
+    margin:0;
+    padding:0;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+.container{
+    display:flex;
+}
+main{
+    width: 100%;
+    padding-left: 1rem;
+    background: #000;
+    
+}
+.link{
+  width: 80%;
+  margin: 0 auto;
+  border-radius: 0.5rem;
+  margin-top: 0.5rem;
+  font-weight: 1rem;
+}
+.mode{
+  display: flex;
+  width: 45%;
+  justify-content: space-between;
+}
+.screenmode{
+  background: #353949;
+  color:grey;
+  border-radius: 0.5rem;
+  font-size: 5%;
+}
+.navlink{
+  display: flex;
+  flex-direction: column;
+  height: 80%;
+  justify-content: space-between;
+}
+.sidebar{
+    background: #000;
+    color: #fff;
+    height: 100vh;
+    width: 200px;
+    transition: all 0.5s;
+    border-right: 2px solid grey;
+    display: flex;
+    flex-direction: column;
+}
+.top_section{
+    display: flex;
+    align-items:center;
+    padding:20px 15px;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+.logo{
+    font-size: 30px;
+}
+.bars{
+    display: flex;
+    font-size: 25px;
+    margin-left: 50px;
+}
+.link{
+    display: flex;
+    color: #787888;
+    padding: 10px 15px;
+    gap: 15px;
+    transition: all 0.5s;
+}
+.link:hover{
+  background-color: #353945;
+  color: white;
+    transition: all 0.5s;
+}
+.active{
+  background-color: #353945;
+  color: white;
+}
+.icon, .link_text{
+    font-size: 1rem;
+    font-weight: 600;
+}
+.App {
+    font-family: sans-serif;
+    text-align: center;
+  }
+  .mcomment {
+    
+    width: 70vw;
+   
+    
+  }
+  .mbottom {
+    display: flex;
+  }
+  .mtodo {
+    display: flex;
+    flex-direction: column; 
+    margin-top: 2rem;
+    margin-right: 1rem;
+    height: 25vh;
+    width: 18vw;
+    text-align: center;
+    justify-content: space-between;
+   
+  }
+  .madd{
+    margin-top: 2rem;
+    color:black;
+    display: flex;
+    height:5vh ;
+    background: #242731;
+    color:grey;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.5rem;
+    width: 20%;
+    box-sizing: border-box;
+    padding: 0.5rem;
+    
+  }
+  .madd input{
+    background: #242731;
+    width: 95%;
+    border: none;;
+    color: white;
+    font-weight: 700;
+    height: 100%;
+    outline: none;
+  }
+  .mtodoassign{
+    display: flex;
+    flex-direction: column;
+    background:  #242731;
+    margin-top: 2rem;
+    margin-right: 1rem;
+    height: 18vh;
+    width: 95%;
+    text-overflow: ellipsis;
+    overflow: auto;
+    word-wrap: break-word;
+    white-space: nowrap;
+    text-align: center;
+    border-radius: 0.5rem;
+    justify-content: space-between;
+    color: white;
+    box-sizing: border-box;
+    padding: 0.5rem;
+  }
+  .mtodoassign p{
+    height: 70%;
+    text-align: left;
+    font-weight: 700;
+    width: 50%
+    ;
+    word-wrap: break-word;
+    text-overflow: ellipsis;
+  }
+  .todolistname{
+    background: #242731;
+    color:white;
+    border-radius: 0.5rem;
+    height: 5vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 0.5rem;
+  }
+  .todolist{
+    background: #242731;
+    display: flex;
+    height: 18vh;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 0.54rem;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-weight: 700;
+    border-radius: 0.5rem;
+  }
+  .todolist input{
+    background: #242731;
+    border: none;
+    color: white;
+    font-weight: 700;
+    outline: none;
+  }
+  .todolist textarea{
+    height:80%;
+    width: 90%;
+    background: #242731;
+    color: white;
+    font-weight: 700;
+    border: none;
+    resize: none;
+    outline: none;
+    margin-top: 0.5rem;
+  }
+  .divmain{
+    display: flex;
+  }
+  .bottombtn{
+    width: 80%;
+    height: 10%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+   margin: 0 auto;
+   color:#353945;
+  }
+  .btn{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    height:40%;
+  }
+  .bottombtn button{
+    background: #353945;
+    color: white;
+    width: 45%;
+    
+    border:none;
+    font-weight: 700;
+    border-radius: 0.5rem;
+  }
+  .bottombtn button:hover{
+    color: #353945;
+    background: white;
+    width: 45%;
+    
+    border:none;
+    font-weight: 700;
+    border-radius: 0.5rem;
+  }
+  
