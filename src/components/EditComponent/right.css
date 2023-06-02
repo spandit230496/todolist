@@ -11,6 +11,10 @@
     
 
 }
+.rightNav{
+    display: flex;
+    flex-direction: column;
+}
 .containerright{
     
    background: black;
@@ -21,11 +25,11 @@
     width: 20vw;
     display: flex;
     flex-direction: column;
-    top:12%;
+    top:10%;
     z-index: 10000;
     height: 88vh;
     position: absolute;
-    left:80%;
+    left:79%;
     color:white;
     box-sizing: border-box;
     padding: 0.5rem;

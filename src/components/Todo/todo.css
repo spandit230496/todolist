@@ -120,5 +120,5 @@ display: flex;
 .side{
   display: flex;
   flex-direction: column;
-  background: yellow;
+  
 }

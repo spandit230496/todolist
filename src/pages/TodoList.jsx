@@ -22,16 +22,18 @@ const getLocalItem = () => {
     return JSON.parse(localStorage.getItem("list"));
   } else return [];
 };
-const Comment = () => {
+const TodoList = () => {
   const [todoLists, setTodoLists] = useState(getLocalItem);
   const [newListName, setNewListName] = useState("");
   const [newTodoInputs, setNewTodoInputs] = useState({});
   const [editedId, setEditedId] = useState(0);
-  const [data, setData] = useState({ heading: "", paragraph: "" });
+  const [data, setData] = useState({});
   
+
   useEffect(() => {
-    console.log(todoLists);
-  }, [todoLists]);
+    console.log("FinalTodo-->", todoLists);
+    console.log("DATAAAAA-->", data);
+  }, [todoLists, data]);
 
   const addList = () => {
     if (newListName === "") {
@@ -46,7 +48,7 @@ const Comment = () => {
     };
 
     setTodoLists((prevLists) => [...prevLists, newList]);
-   // setTodoLists( [...todoLists, newList]);
+    // setTodoLists( [...todoLists, newList]);
 
     setNewListName("");
 
@@ -87,7 +89,7 @@ const Comment = () => {
       [listId]: { title: "", description: "" },
     }));
   };
-  
+
   //delete the list
   const handleDelete = (id) => {
     const deletedItem = todoLists.filter((item) => item.id === id);
@@ -106,42 +108,69 @@ const Comment = () => {
     }));
   };
 
-  const edit = (listid, id) => {
-    let item = [...todoLists].todos.find((itemedit) => {
-      return itemedit.id === id;
-    });
-    setEditedId(id);
-    setData(item);
-    console.log(item);
+  const edit = (listId, id) => {
+    const list = todoLists.find((list) => list.id === listId);
+    if (list) {
+      const item = list.todos.find((itemedit) => itemedit.id === id);
+      setEditedId(id);
+      console.log("EditItem-->", item);
+      console.log(data, "{}{")
+     // setEditVal({heading:item.title,paragraph:item.description})
+      setData(item);
+      
+    }
   };
 
+
   function Update() {
-    const editedTodo = [...todoLists].todos.find((item) => item.id === editedId);
-    console.log(editedId)
-    const updated = todoLists[0].todos.map((todo) => {
-      if (todo.id === editedTodo.id) {
-        return {
-          ...todo,
-          title: data.title,
-          description: data.description,
-        };
-      }
-      return todo;
+    const updatedTodoLists = todoLists.map((list) => {
+      const updatedTodos = list.todos.map((todo) => {
+        if (todo.id === editedId) {
+          if(data.title===""){
+            return {
+              ...todo,
+              title:todo.title,
+              description: data.description,
+            }; 
+          }
+         else if(data.description===""){
+            return {
+              ...todo,
+              title:data.title,
+              description:todo.description,
+            }; 
+          }
+        else{
+          return {
+            ...todo,
+            title: data.title,
+            description: data.description,
+          };
+        }
+        }
+        return todo;
+      });
+
+      return {
+        ...list,
+        todos: updatedTodos,
+      };
     });
-    // setNewListName(...newListName,updated)
-    // setTodoLists([...todoLists,newListName])
-    console.log(todoLists[0].todos);
-    console.log(updated);
+
+    setTodoLists(updatedTodoLists);
     setEditedId(0);
-    toast("data updated");
+    setData({ heading: "", paragraph: "" });
+    toast("data updated ")
   }
-  
+
+  console.log(data);
 
   return (
     <div className="mcomment">
       <div className="divmain">
         <div className="mbottom">
           {/* Display Todo Lists */}
+          <ToastContainer />
           {todoLists.map((list) => (
             <div key={list.id}>
               <div className="mtodo">
@@ -153,7 +182,7 @@ const Comment = () => {
                   />
                 </div>
                 <div className="todolist">
-                  <div style={{ display: "flex" }}>
+                  <div className="hsection" >
                     <FaUser
                       style={{ color: "grey", marginRight: "0.2rem" }}
                       className="fa"
@@ -233,7 +262,7 @@ const Comment = () => {
         {editedId ? (
           <div>
             <div className="containerright">
-              <div className="edit">
+              <div className="edit" onClick={() => setEditedId(0)}>
                 <WestOutlined />
                 <h1>Edit</h1>
               </div>
@@ -242,18 +271,19 @@ const Comment = () => {
                   type="text"
                   value={data.title}
                   placeholder="Edit Heading"
-                  onChange={(e) => setData({ ...data, title: e.target.value })}
-                ></input>
+                  onChange={(e) =>
+                    setData({ ...data, title: e.target.value })
+                  }
+                />
                 <textarea
                   type="text"
-                  value={data.description}
                   placeholder="Edit Description"
+                  value={data.description}
                   onChange={(e) =>
                     setData({ ...data, description: e.target.value })
                   }
                 ></textarea>
                 <button onClick={Update}>Save</button>
-                <ToastContainer />
               </div>
             </div>
           </div>
@@ -265,4 +295,4 @@ const Comment = () => {
   );
 };
 
-export default Comment;
+export default TodoList;
